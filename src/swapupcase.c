@@ -29,6 +29,7 @@ int swapupcase(char *str)
     res = case_string(str, is_string_odd);
     if (res == ERROR)
         return EPITECH_KO;
+    int z = 0;
     write(1, str, size);
     return EPITECH_OK;
 }
