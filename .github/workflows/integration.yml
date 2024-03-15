@@ -34,7 +34,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
 
-            - Checkout GH repo
+            - name: Checkout GM repo
               uses: actions/checkout@v4
 
             - name: Compile repository
@@ -43,7 +43,7 @@ jobs:
             - name: Check bianry presence
               run: |
                 if [ ! -f ./swapupcase ]; then
-                    echo "//eroor file =swapupcase, title=Binary Error::Binary not found"
+                    echo "::error file =swapupcase, title=Binary Error::Binary not found"
                     exit 1
                 fi
                 exit 0 
